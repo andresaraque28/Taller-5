@@ -1,0 +1,27 @@
+name: CI
+
+# ciando se va a correr en cada push y pull request
+on : [push, pull_request]
+
+#jobs o trabajos
+jobs:
+  test:
+    runs-on: ubuntu-latest # donde va a correr el job
+    steps:
+    #1 traer el codigo del repo a la maquina
+    - uses: actions/checkout@v4
+    #2 instalar pythhon
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    #3 instalar dependencias
+    - run : pip install -r requirements.txt
+
+    # 4 revisa el estilo con el linter
+    - run : ruff check
+
+    # 5 correr los tests
+    - run : pytest
+
+      
