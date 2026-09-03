@@ -29,3 +29,6 @@ pytest                           # 5 passed
 3. Súbelo a GitHub y velo ponerse verde en la pestaña Actions.
 4. Rómpelo a propósito (un test y un lint) para ver el rojo, y arréglalo.
 5. Documenta con capturas y trabaja con ≥5 commits.
+
+
+![alt text](image.png)
